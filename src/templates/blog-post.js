@@ -19,11 +19,12 @@ class BlogPostTempalte extends Component {
           title={`${title} | Michael J. Deeb`}
           meta={[
             { name: 'description', content: description },
-            { name: 'og:description', content: description },
-            { name: 'og:image', content: `https://michaeljdeeb.com${image}` },
-            { name: 'og:site_name', content: 'michaeljdeeb.com' },
-            { name: 'og:title', content: title },
-            { name: 'og:type', content: 'article' },
+            { property: 'og:description', content: description },
+            { property: 'og:image', content: `https://michaeljdeeb.com${image}` },
+            { property: 'og:site_name', content: 'michaeljdeeb.com' },
+            { property: 'og:title', content: title },
+            { property: 'og:type', content: 'article' },
+            { property: 'og:url', content: 'https://michaeljdeeb.com' },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@michaeljdeeb' },
           ]}
