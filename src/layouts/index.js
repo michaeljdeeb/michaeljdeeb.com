@@ -10,9 +10,7 @@ import './index.css';
 import styles from './index.module.css';
 
 const TemplateWrapper = ({ children, data }) => {
-  const { title, description, repositoryUrl } = data.site.siteMetadata;
-
-  console.info(`Hi! If you'd like to see how the code looks pre-production, it lives here: ${repositoryUrl}`);
+  const { title, description } = data.site.siteMetadata;
 
   return (
     <div>
@@ -41,7 +39,6 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        repositoryUrl
       }
     }
   }

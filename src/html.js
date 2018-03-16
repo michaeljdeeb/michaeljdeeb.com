@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = class HTML extends React.Component {
   render() {
+    console.info('Hi! If you\'d like to see how the code looks pre-production, it lives here: https://github.com/michaeljdeeb/michaeljdeeb.com');
     let css;
     if (process.env.NODE_ENV === 'production') {
       css = (
