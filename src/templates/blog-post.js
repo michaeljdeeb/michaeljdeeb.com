@@ -12,7 +12,6 @@ class BlogPostTempalte extends Component {
     const { date, description, title } = frontmatter;
     const image = frontmatter.image.childImageSharp.sizes.src;
     const blogDate = prettyDate(date);
-    console.log(image);
 
     return (
       <main>
