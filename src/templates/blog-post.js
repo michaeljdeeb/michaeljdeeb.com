@@ -9,7 +9,7 @@ class BlogPostTempalte extends Component {
   render() {
     const post = this.props.data.markdownRemark;
     const { frontmatter, html } = post;
-    const { date, description, title } = frontmatter;
+    const { date, description, title, path } = frontmatter;
     const image = frontmatter.image.childImageSharp.sizes.src;
     const blogDate = prettyDate(date);
 
@@ -24,7 +24,7 @@ class BlogPostTempalte extends Component {
             { property: 'og:site_name', content: 'michaeljdeeb.com' },
             { property: 'og:title', content: title },
             { property: 'og:type', content: 'article' },
-            { property: 'og:url', content: 'https://michaeljdeeb.com' },
+            { property: 'og:url', content: `https://michaeljdeeb.com${path}` },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@michaeljdeeb' },
           ]}
@@ -43,9 +43,10 @@ export const postQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
         date
         description
+        path
+        title
         image {
           childImageSharp {
             sizes {
