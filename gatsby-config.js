@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Michael J. Deeb',
     description: 'Michael Deeb is a web developer in San Francisco, CA. This is his personal website.',
-    repositoryUrl: 'LINK',
+    repositoryUrl: 'https://github.com/michaeljdeeb/michaeljdeeb.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -41,5 +41,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 };
