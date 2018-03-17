@@ -25,6 +25,10 @@ textarea {
   width: 100%;
 }
 
+.phone {
+  display: none;
+}
+
 .textarea {
   composes: inputShared;
   width: 100%;
